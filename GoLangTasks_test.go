@@ -1,7 +1,6 @@
 package main
 
 import (
-
 	"testing"
 )
 //TESTS : TestSortByNumberOfCharA
@@ -13,6 +12,7 @@ func TestSortByNumberOfCharAOne(t *testing.T) {
 	want :=[6]string{"jumbAaaas", "jumbAaaa", "jumbAaa", "jumbAa","jumbA"}
 
 	output, _ := sortByNumberOfCharA(input)
+
 	a, err := sortByNumberOfCharA(input)
 	if a != want {
 		t.Fatalf(`sortByNumberOfCharA([6]string %q) = %q, want match for %#q, nil %q`, input, want, output, err)
@@ -21,9 +21,9 @@ func TestSortByNumberOfCharAOne(t *testing.T) {
 
 func TestSortByNumberOfCharATwo(t *testing.T) {
 
-	input := [6]string{"", "", "", "a", "a"}
+	input := [6]string{"", "aaa", "", "aa", "a"}
 
-	want :=[6]string{"a", "a", "", "",""}
+	want :=[6]string{"aaa", "aa", "a", "",""}
 
 	output, _ := sortByNumberOfCharA(input)
 	a, err := sortByNumberOfCharA(input)
